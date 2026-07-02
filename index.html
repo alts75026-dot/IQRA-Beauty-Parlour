@@ -28,34 +28,31 @@
     <!-- Navigation Header -->
     <header id="main-header">
         <div class="nav-container">
-            <!-- Hamburger Menu Trigger (Visible on mobile/tablet) -->
-            <div class="menu-toggle-btn" onclick="toggleSideDrawer()">
-                <div class="hamburger-bar bar-1"></div>
-                <div class="hamburger-bar bar-2"></div>
-                <div class="hamburger-bar bar-3"></div>
-            </div>
-
-            <!-- Left Group Links -->
-            <nav class="nav-group nav-group-left">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#bridal">Bridal Special</a>
-            </nav>
-
-            <!-- Centered Logo -->
-            <a href="#" class="logo centered-logo">
+            <!-- Logo (Left aligned) -->
+            <a href="#" class="logo">
                 <span class="brand-name">IQRA</span>
                 <span class="brand-subtitle">Beauty Parlour</span>
             </a>
 
-            <!-- Right Group Links + CTA -->
-            <div class="nav-right-container">
-                <nav class="nav-group nav-group-right">
-                    <a href="#gallery">Gallery</a>
-                    <a href="#bookings-tracker">My Bookings</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-                <button class="btn-gold nav-book-btn" onclick="openBookingWizard()">Book Slot</button>
+            <!-- Navigation Links (Center aligned) -->
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#bridal">Bridal Special</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#bookings-tracker">My Bookings</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- CTA Actions (Right aligned) -->
+            <div class="nav-actions">
+                <button class="btn-gold" onclick="openBookingWizard()">Book Slot</button>
+                <!-- Hamburger Menu Trigger (Visible on mobile only) -->
+                <div class="menu-toggle-btn" onclick="toggleSideDrawer()">
+                    <div class="hamburger-bar bar-1"></div>
+                    <div class="hamburger-bar bar-2"></div>
+                    <div class="hamburger-bar bar-3"></div>
+                </div>
             </div>
         </div>
     </header>
