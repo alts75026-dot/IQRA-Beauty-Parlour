@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQRA Beauty Parlour - Premium Luxury Salon & Spa</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience premium luxury beauty services at IQRA Beauty Parlour. Bridal makeup, expert hair styling, custom skincare, and nail art. Book your slot online today.">
+    <meta name="keywords" content="IQRA Beauty Parlour, luxury beauty parlour, bridal makeup, hair styling, skin care, online salon booking">
+    
+    <!-- DNS Prefetch & Resource Preconnection for High Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- FontAwesome for Icons (Asynchronous optimization) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Custom Style System -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Scroll Progress Indicator Bar -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+    <!-- Navigation Header -->
+    <header id="main-header">
+        <div class="nav-container">
+            <!-- Hamburger Menu Trigger (Visible on mobile/tablet) -->
+            <div class="menu-toggle-btn" onclick="toggleSideDrawer()">
+                <div class="hamburger-bar bar-1"></div>
+                <div class="hamburger-bar bar-2"></div>
+                <div class="hamburger-bar bar-3"></div>
+            </div>
+
+            <!-- Left Group Links -->
+            <nav class="nav-group nav-group-left">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#bridal">Bridal Special</a>
+            </nav>
+
+            <!-- Centered Logo -->
+            <a href="#" class="logo centered-logo">
+                <span class="brand-name">IQRA</span>
+                <span class="brand-subtitle">Beauty Parlour</span>
+            </a>
+
+            <!-- Right Group Links + CTA -->
+            <div class="nav-right-container">
+                <nav class="nav-group nav-group-right">
+                    <a href="#gallery">Gallery</a>
+                    <a href="#bookings-tracker">My Bookings</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="btn-gold nav-book-btn" onclick="openBookingWizard()">Book Slot</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Drawer Backdrop Overlay -->
+    <div class="drawer-overlay" id="drawer-overlay" onclick="toggleSideDrawer()"></div>
+
+    <!-- Unified Slide Drawer -->
+    <div class="side-drawer" id="side-drawer">
+        <div class="drawer-header">
+            <a href="#" class="logo drawer-logo">
+                <span class="brand-name">IQRA</span>
+                <span class="brand-subtitle">Beauty Parlour</span>
+            </a>
+            <div class="drawer-close-btn" onclick="toggleSideDrawer()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="drawer-body">
+            <nav class="drawer-links">
+                <a href="#home" onclick="toggleSideDrawer()" class="drawer-link-item">Home</a>
+                <a href="#services" onclick="toggleSideDrawer()" class="drawer-link-item">Services Menu</a>
+                <a href="#bridal" onclick="toggleSideDrawer()" class="drawer-link-item">Bridal Special</a>
+                <a href="#gallery" onclick="toggleSideDrawer()" class="drawer-link-item">Gallery Portfolio</a>
+                <a href="#bookings-tracker" onclick="toggleSideDrawer()" class="drawer-link-item">My Bookings</a>
+                <a href="#contact" onclick="toggleSideDrawer()" class="drawer-link-item">Contact Us</a>
+            </nav>
+            
+            <div class="drawer-footer">
+                <div class="drawer-contact-info">
+                    <h4>Salon Hours</h4>
+                    <p>Tue - Sun: 10:00 AM - 08:00 PM</p>
+                    <p style="color: var(--clr-error); margin-top: 0.2rem; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">Monday: Closed</p>
+                </div>
+                <div class="drawer-contact-info" style="margin-top: 1.5rem;">
+                    <h4>Reservations</h4>
+                    <p><i class="fa-solid fa-phone" style="color: var(--clr-gold-primary); font-size: 0.8rem; margin-right: 0.5rem;"></i> +91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Cinematic Background Zoom & Overlay -->
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle" style="animation: fadeUp 1s ease-out forwards;">Premium Luxury Experience</span>
+                <h1 class="hero-title" style="animation: fadeUp 1s ease-out 0.2s forwards; opacity: 0;">Where Beauty Meets <span>Elegance</span></h1>
+                <p class="hero-desc" style="animation: fadeUp 1s ease-out 0.4s forwards; opacity: 0;">Indulge in our exquisite beauty treatments, bespoke bridal styling, and high-fashion makeovers. Crafted exclusively for those who appreciate the finer details of luxury care.</p>
+                <div class="hero-actions" style="animation: fadeUp 1s ease-out 0.6s forwards; opacity: 0;">
+                    <button class="btn-gold" onclick="openBookingWizard()">Book Appointment</button>
+                    <a href="#services" class="btn-outline">Explore Menu</a>
+                </div>
+            </div>
+        </div>
+        <!-- Elegant Bouncing Scroll Down Indicator -->
+        <div class="scroll-indicator" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Features Bar -->
+    <div class="features-bar">
+        <div class="features-container">
+            <div class="feature-item reveal reveal-delay-1">
+                <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+                <h4 class="feature-title">Premium Products</h4>
+                <p class="feature-desc">High-end global brands</p>
+            </div>
+            <div class="feature-item reveal reveal-delay-2">
+                <div class="feature-icon"><i class="fa-solid fa-scissors"></i></div>
+                <h4 class="feature-title">Expert Stylists</h4>
+                <p class="feature-desc">Certified industry professionals</p>
+            </div>
+            <div class="feature-item reveal reveal-delay-3">
+                <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
+                <h4 class="feature-title">Personalized Care</h4>
+                <p class="feature-desc">Customized beauty plans</p>
+            </div>
+            <div class="feature-item reveal reveal-delay-4">
+                <div class="feature-icon"><i class="fa-solid fa-crown"></i></div>
+                <h4 class="feature-title">Luxury Ambience</h4>
+                <p class="feature-desc">Plush & private environment</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header reveal">
+            <span>Our Exquisite Offerings</span>
+            <h2>Luxury Services Menu</h2>
+        </div>
+        
+        <div class="services-tabs reveal">
+            <button class="tab-btn active" onclick="filterServices('all', this)">All</button>
+            <button class="tab-btn" onclick="filterServices('makeup', this)">Makeup</button>
+            <button class="tab-btn" onclick="filterServices('hair', this)">Hair Styling</button>
+            <button class="tab-btn" onclick="filterServices('skincare', this)">Skincare</button>
+            <button class="tab-btn" onclick="filterServices('bridal', this)">Bridal Special</button>
+            <button class="tab-btn" onclick="filterServices('nails', this)">Nails</button>
+        </div>
+
+        <div class="services-container">
+            <div class="services-grid" id="services-grid">
+                <!-- Services will be populated dynamically from app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section (Split) -->
+    <section class="showcase" id="bridal">
+        <div class="showcase-row reveal">
+            <div class="showcase-col">
+                <div class="showcase-img" style="background-image: url('assets/makeup.png');"></div>
+            </div>
+            <div class="showcase-col">
+                <div class="showcase-info">
+                    <span class="showcase-tag">Exclusive bridal art</span>
+                    <h3 class="showcase-title">The Royal Bridal Couture Experience</h3>
+                    <p class="showcase-desc">Your wedding day is a once-in-a-lifetime occasion, and our signature bridal makeovers are tailored to reflect your individual grace and grandeur. From traditional elegance to contemporary glam, our high-definition makeup and hair design ensure you glow under every light.</p>
+                    <div>
+                        <button class="btn-gold" onclick="openBookingWizard('Bridal Special Makeup')">Reserve Bridal Consultation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-row reveal">
+            <div class="showcase-col">
+                <div class="showcase-info" style="background-color: var(--clr-bg-primary);">
+                    <span class="showcase-tag">Hair Craftsmanship</span>
+                    <h3 class="showcase-title">Signature Sculpting & Color Artistry</h3>
+                    <p class="showcase-desc">Revitalize your locks with our premium hair couture services. From custom hand-painted balayage and deep conditioning keratin infusions to precision structure cuts, our master hair artists design looks that complement your unique style and facial attributes.</p>
+                    <div>
+                        <a href="#services" class="btn-outline">View Hair Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-col">
+                <div class="showcase-img" style="background-image: url('assets/hair.png');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header reveal">
+            <span>Portfolio Highlights</span>
+            <h2>Our Artistry Gallery</h2>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <div class="gallery-item reveal reveal-delay-1">
+                    <img src="assets/makeup.png" alt="Bridal Makeover" loading="lazy" width="400" height="350">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Bridal Makeup</span>
+                        <h4 class="gallery-title">Traditional Royal Elegance</h4>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2">
+                    <img src="assets/hair.png" alt="Hair Styling" loading="lazy" width="400" height="350">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Hair Couture</span>
+                        <h4 class="gallery-title">Golden Ombré Balayage</h4>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-3">
+                    <img src="assets/hero_bg.png" alt="Salon Luxury Interior" loading="lazy" width="400" height="350">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Our Space</span>
+                        <h4 class="gallery-title">Vogue Lounge & Styling Bay</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide active">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"I booked IQRA Beauty Parlour for my wedding makeup, and it was the best decision! The makeup looked flawless all night, and I received endless compliments. Truly premium service!"</p>
+                    <h4 class="testimonial-author">Sanya Mirza</h4>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"The balayage hair color service here is outstanding. The staff is highly professional, and the atmosphere feels like a high-end luxury spa in Paris."</p>
+                    <h4 class="testimonial-author">Rhea Kapoor</h4>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Their Gold Radiance Facials are amazing. Highly recommend visiting for anyone looking for authentic skin therapy and professional services."</p>
+                    <h4 class="testimonial-author">Pooja Sharma</h4>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls" id="slider-dots">
+                <span class="slider-dot active" onclick="setSlide(0)"></span>
+                <span class="slider-dot" onclick="setSlide(1)"></span>
+                <span class="slider-dot" onclick="setSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Bookings Dashboard Section -->
+    <section class="bookings-section" id="bookings-tracker">
+        <div class="bookings-container">
+            <div class="bookings-card">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <span>Manage Appointments</span>
+                    <h2>My Bookings Dashboard</h2>
+                </div>
+                <div class="bookings-search-bar">
+                    <input type="text" id="booking-search-input" class="form-control" placeholder="Enter your Phone Number to view your bookings..." style="max-width: 450px;">
+                    <button class="btn-gold" onclick="searchClientBookings()" style="padding: 0.85rem 1.5rem;">Track Slots</button>
+                </div>
+                <div class="bookings-list" id="client-bookings-list">
+                    <div class="booking-empty-notice">
+                        Enter your phone number above to track your active beauty appointments.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secrets Owner Admin Dashboard Section -->
+    <section class="admin-section" id="admin-portal">
+        <div class="admin-container">
+            <div class="admin-card">
+                <div class="admin-header-row">
+                    <div class="admin-header-title">
+                        <h3><span>IQRA</span> parlour Owner Panel</h3>
+                        <p>Manage all customer booked slots and appointment status.</p>
+                    </div>
+                    <div>
+                        <button class="btn-outline" onclick="logoutAdmin()" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;">Log Out</button>
+                    </div>
+                </div>
+                <div class="admin-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Ref ID</th>
+                                <th>Customer Details</th>
+                                <th>Requested Services</th>
+                                <th>Date & Time</th>
+                                <th>Total Cost</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-bookings-table-body">
+                            <!-- Populated via app.js -->
+                        </tbody>
+                    </table>
+                    <div class="admin-empty-notice" id="admin-empty-notice" style="display: none;">
+                        No appointments have been booked yet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Booking Wizard Modal Overlay -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Book a <span>Luxury Slot</span></h3>
+                <div class="modal-close" onclick="closeBookingWizard()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Step Nodes Indicator -->
+                <div class="wizard-steps">
+                    <div class="wizard-step-wrapper active" id="node-step1">
+                        <div class="wizard-step-node">1</div>
+                        <div class="wizard-step-label">Services</div>
+                    </div>
+                    <div class="wizard-step-wrapper" id="node-step2">
+                        <div class="wizard-step-node">2</div>
+                        <div class="wizard-step-label">Time & Date</div>
+                    </div>
+                    <div class="wizard-step-wrapper" id="node-step3">
+                        <div class="wizard-step-node">3</div>
+                        <div class="wizard-step-label">Details</div>
+                    </div>
+                    <div class="wizard-step-wrapper" id="node-step4">
+                        <div class="wizard-step-node">4</div>
+                        <div class="wizard-step-label">Summary</div>
+                    </div>
+                </div>
+
+                <!-- Wizard Screen 1: Select Services -->
+                <div class="wizard-screen active" id="screen-step1">
+                    <h4 style="margin-bottom: 1.5rem; font-family: var(--ff-heading); font-size: 1.2rem;">Choose your luxury treatments:</h4>
+                    <div class="booking-services-list" id="wizard-services-list">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+
+                <!-- Wizard Screen 2: Select Date & Time -->
+                <div class="wizard-screen" id="screen-step2">
+                    <h4 style="margin-bottom: 1.5rem; font-family: var(--ff-heading); font-size: 1.2rem;">Select Date and Time Slot:</h4>
+                    <div class="datetime-container">
+                        <!-- Custom Calendar Widget -->
+                        <div class="calendar-widget">
+                            <div class="calendar-header">
+                                <span class="calendar-nav-btn" onclick="prevMonth()"><i class="fa-solid fa-chevron-left"></i></span>
+                                <span class="calendar-month" id="calendar-month-year">July 2026</span>
+                                <span class="calendar-nav-btn" onclick="nextMonth()"><i class="fa-solid fa-chevron-right"></i></span>
+                            </div>
+                            <div class="calendar-days-grid" id="calendar-days">
+                                <!-- Calendar days filled dynamically -->
+                            </div>
+                        </div>
+                        
+                        <!-- Time Slots -->
+                        <div class="slots-container">
+                            <span class="slots-title">Available Slots</span>
+                            <div class="slots-grid" id="slots-grid">
+                                <!-- Loaded dynamically based on date selection -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wizard Screen 3: Enter Details -->
+                <div class="wizard-screen" id="screen-step3">
+                    <h4 style="margin-bottom: 1.5rem; font-family: var(--ff-heading); font-size: 1.2rem;">Your Contact Details:</h4>
+                    <form class="booking-form" id="booking-details-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label for="cust-name">Full Name *</label>
+                            <input type="text" id="cust-name" class="form-control" placeholder="e.g., Anjali Sharma" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cust-phone">Phone Number *</label>
+                            <input type="tel" id="cust-phone" class="form-control" placeholder="e.g., 9876543210" required>
+                        </div>
+                        <div class="form-group form-group-full">
+                            <label for="cust-email">Email Address *</label>
+                            <input type="email" id="cust-email" class="form-control" placeholder="e.g., anjali@gmail.com" required>
+                        </div>
+                        <div class="form-group form-group-full">
+                            <label for="cust-notes">Special Requests (Optional)</label>
+                            <textarea id="cust-notes" class="form-control" placeholder="Any specific requirements, styling requests, skin sensitivities, or bridal instructions..."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Wizard Screen 4: Receipt Summary -->
+                <div class="wizard-screen" id="screen-step4">
+                    <div class="booking-receipt" id="booking-summary-receipt">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer Controls -->
+            <div class="modal-footer">
+                <div class="modal-footer-info" id="wizard-summary-info">
+                    Total: <span id="wizard-temp-total">₹0</span> | Selected: <span id="wizard-temp-count">0 services</span>
+                </div>
+                <div class="wizard-controls">
+                    <button class="btn-outline" id="btn-wizard-prev" onclick="prevWizardStep()" style="display: none;">Back</button>
+                    <button class="btn-gold" id="btn-wizard-next" onclick="nextWizardStep()">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification System -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-logo-desc">
+                <a href="#" class="logo">
+                    <span class="brand-name">IQRA</span>
+                    <span class="brand-subtitle">Beauty Parlour</span>
+                </a>
+                <p>Welcome to Iqra Beauty Parlour, the standard for ultra-premium skincare, bridal glamour, and designer hairstyles. We craft styling details that enhance your natural sophistication.</p>
+                <div class="social-links">
+                    <a class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="social-btn"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Hair Styling</a></li>
+                    <li><a href="#services">Bridal Couture</a></li>
+                    <li><a href="#services">HD Makeup</a></li>
+                    <li><a href="#services">Organic Skincare</a></li>
+                    <li><a href="#services">Nail Extensions</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Salon Hours</h4>
+                <ul class="footer-links" style="color: var(--clr-text-muted); font-size: 0.8rem;">
+                    <li style="margin-bottom: 0.5rem;">Tuesday - Sunday:<br><span style="color: var(--clr-gold-primary);">10:00 AM - 08:00 PM</span></li>
+                    <li>Monday:<br><span style="color: var(--clr-error);">Closed (Styling Break)</span></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Contact Info</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Shop No. 4, Prestige Plaza, Opp. Central Park, New Delhi, India</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210<br>+91 99999 88888</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>appointments@iqrabeauty.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2026 IQRA Beauty Parlour. All rights reserved. Designed for Premium Luxury.
+            </div>
+            <div class="footer-extra">
+                <span class="admin-access-btn" onclick="promptAdminLogin()">Owner Portal Access</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
